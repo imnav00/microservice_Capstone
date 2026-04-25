@@ -1,0 +1,1 @@
+package com.infy.inventrack.common.dto; import jakarta.validation.constraints.*; import lombok.Data; @Data public class DescriptionUpdateRequest { @NotBlank @Size(max=500) private String description; }

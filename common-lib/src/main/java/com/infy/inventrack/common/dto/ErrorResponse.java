@@ -1,0 +1,1 @@
+package com.infy.inventrack.common.dto; import lombok.*; import java.time.LocalDateTime; @Data @NoArgsConstructor @AllArgsConstructor public class ErrorResponse { private LocalDateTime timestamp; private int status; private String errorCode; private String message; private String path; }

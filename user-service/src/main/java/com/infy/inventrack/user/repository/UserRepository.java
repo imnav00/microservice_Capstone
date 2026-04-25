@@ -1,0 +1,1 @@
+package com.infy.inventrack.user.repository; import com.infy.inventrack.user.entity.AppUser; import org.springframework.data.jpa.repository.JpaRepository; public interface UserRepository extends JpaRepository<AppUser,Integer>{ boolean existsByUserNameIgnoreCase(String userName); boolean existsByEmailIgnoreCase(String email); }

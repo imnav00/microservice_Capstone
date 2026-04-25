@@ -1,0 +1,1 @@
+package com.infy.inventrack.inventory.repository; import com.infy.inventrack.inventory.entity.InventoryItem; import org.springframework.data.jpa.repository.JpaRepository; import java.util.Optional; public interface InventoryRepository extends JpaRepository<InventoryItem,Integer>{ Optional<InventoryItem> findBySku(String sku); boolean existsBySku(String sku); }

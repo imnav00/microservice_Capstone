@@ -1,0 +1,5 @@
+package com.infy.inventrack.common.constants;
+public enum InfyInvenTrackConstants {
+ PRODUCT_CREATED("201 - Successfully created the product"), PRODUCT_UPDATED("200 - Update successfully completed"), PRODUCT_DELETED("200 - Deleted the product"), CATEGORY_CREATED("201 - Category created successfully"), CATEGORY_UPDATED("200 - Category updated successfully"), CATEGORY_DELETED("200 - Category deleted successfully"), DESCRIPTION_UPDATED("Product description updated successfully"), STOCK_RESERVED("200 - stock with %d is reserved"), INSUFFICIENT_STOCK("409 - insufficient stock"), PRODUCT_NOT_FOUND("404 - no product found"), CATEGORY_NOT_FOUND("Category not found"), DUPLICATE_SKU("409 - Conflict with existing SKU"), DUPLICATE_USERNAME("Username already exists"), DUPLICATE_CATEGORY("Category already exists"), INVALID_ATTRIBUTE("Please provide a valid %s"), DOWNSTREAM_UNAVAILABLE("Service temporarily unavailable, please try again later");
+ private final String value; InfyInvenTrackConstants(String value){this.value=value;} public String value(){return value;}
+}

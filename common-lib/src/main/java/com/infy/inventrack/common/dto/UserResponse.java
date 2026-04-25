@@ -1,0 +1,1 @@
+package com.infy.inventrack.common.dto; import com.infy.inventrack.common.enums.UserRole; import lombok.*; @Data @NoArgsConstructor @AllArgsConstructor public class UserResponse { private Integer userId; private String userName; private String email; private UserRole role; }

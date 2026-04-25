@@ -1,0 +1,1 @@
+package com.infy.inventrack.common.dto; import lombok.*; @Data @NoArgsConstructor @AllArgsConstructor public class InventoryResponse { private String sku; private Integer stockQuantity; private String availabilityStatus; }

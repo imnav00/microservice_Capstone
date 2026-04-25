@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: api-gateway
+  config:
+    import: optional:consul:
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        prefer-ip-address: true
+    gateway:
+      routes:
+        - id: catalog-products
+          uri: lb://catalog-service
+          predicates: [Path=/infyinventrack/products/**]
+          filters: [RewritePath=/infyinventrack/(?<segment>.*), /${segment}]
+        - id: catalog-categories
+          uri: lb://catalog-service
+          predicates: [Path=/infyinventrack/categories/**]
+          filters: [RewritePath=/infyinventrack/(?<segment>.*), /${segment}]
+        - id: inventory
+          uri: lb://inventory-service
+          predicates: [Path=/infyinventrack/inventory/**]
+          filters: [RewritePath=/infyinventrack/(?<segment>.*), /${segment}]
+        - id: users
+          uri: lb://user-service
+          predicates: [Path=/infyinventrack/users/**]
+          filters: [RewritePath=/infyinventrack/(?<segment>.*), /${segment}]
+server:
+  port: 8080
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics

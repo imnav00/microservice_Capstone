@@ -1,0 +1,3 @@
+package com.infy.inventrack.common.dto;
+import jakarta.validation.constraints.*; import lombok.Data; import java.math.BigDecimal;
+@Data public class ProductRequest { @NotBlank @Size(min=3,max=100) private String productName; @NotBlank @Size(min=3,max=20) private String sku; @NotNull @DecimalMin("0.01") private BigDecimal price; @NotBlank @Pattern(regexp="https?://.+", message="must be a valid URL") private String imageUrl; @NotBlank private String category; @Size(max=500) private String description; @NotBlank @Size(min=2,max=50) private String brand; @NotNull @Min(0) private Integer stockQuantity; }

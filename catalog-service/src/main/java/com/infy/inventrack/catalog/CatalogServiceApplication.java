@@ -1,0 +1,1 @@
+package com.infy.inventrack.catalog; import org.springframework.boot.*; import org.springframework.boot.autoconfigure.*; import org.springframework.cache.annotation.EnableCaching; @SpringBootApplication @EnableCaching public class CatalogServiceApplication { public static void main(String[] args){ SpringApplication.run(CatalogServiceApplication.class,args); } }
